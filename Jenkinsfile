@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Provision Terraform deployment') {
             steps {
-                sh '/opt/homebrew/bin/terraform apply -auto-approve'
+                sh '/opt/homebrew/bin/terraform init && /opt/homebrew/bin/terraform apply -auto-approve'
             }
         }
     }
